@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customer Orders</title>
+</head>
+<body>
+    <div id="orderDiv">
+
+    </div>
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyBHL73d5eKyQNXkJTpWVZNIf0TLN0yTq-E",
+          authDomain: "contactform-cd911.firebaseapp.com",
+          databaseURL: "https://contactform-cd911-default-rtdb.firebaseio.com",
+          projectId: "contactform-cd911",
+          storageBucket: "contactform-cd911.appspot.com",
+          messagingSenderId: "282339874973",
+          appId: "1:282339874973:web:2c3313fd9bd3f9f5d9dc74",
+          measurementId: "G-SLTMVHMVM9"
+        };
+      
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import{getDatabase,ref,get,child} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        const db = getDatabase();
+
+        let orderDiv = document.getElementById('orderDiv');
+        let orderno = 1;
+
+        function getOrder(){
+            const dbref = ref(db);
+        
+        get(child(dbref, 'orders')).then((orders)=>{
+            orders.forEach(ord =>{
+                addOders(ord); 
+
+            })
+        })
+    }
+
+    function addOders(ord){
+        let key = ord.key;
+        let value = ord.val();
+
+        let A_Name = document.createElement('li');
+        let B_Phone = document.createElement('li');
+        let C_Address = document.createElement('li');
+        let D_Date = document.createElement('li');
+        let E_Time = document.createElement('li');
+        let F_Email = document.createElement('li');
+        let G_Message = document.createElement('li');
+        let seatno = document.createElement('li');
+        let heading = document.createElement('h3');
+
+        A_Name.innerHTML = "Name: " + value.A_Name;
+        B_Phone.innerHTML = "Phone : " + value.B_Phone;
+        C_Address.innerHTML = "Address : " + value.C_Address;
+        D_Date.innerHTML = "Date: " + value.D_Date;
+        E_Time.innerHTML = "Time : " + value.E_Time;
+        F_Email.innerHTML = "Email : " + value.F_Email;
+        G_Message.innerHTML = "Order Description: " + value.G_Message;
+        seatno.innerHTMl = "Order 1" + key;
+        heading.innerHTML = "Order #" + orderno;
+
+        let ul = document.createElement('ul');
+        ul.append(heading, A_Name, B_Phone, C_Address, D_Date, E_Time, F_Email, G_Message, seatno);
+        orderDiv.append(ul);
+        orderno++;
+
+    }
+    window.addEventListener('load', getOrder);
+      </script>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"@ content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/mimi's logo.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>All Aroma Food</title>
+    <style>
+      #colorbox {
+width: 30%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+
+background-color: transparent;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+}
+
+#colorbox span {
+display: inline-block;
+width: 70px;
+height: 25px;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+  </style>
+
+</head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container container">
+          <input type="checkbox" name="" id="">
+          <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+              <li style="margin-left: 1em;"> <div style="margin-left: 0em; margin-top: -0.5em;"> Change Themes?</div> <div style="color: black;" id="colorbox"></div></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="drinks.html">Drinks</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="order.html">Order</a></li>
+          </ul>
+          <h1 class="logo">All Aroma</h1>
+      </div>
+  </nav>
+
+    <div class="slideshow">
+      
+           <div id="text"> 
+            
+            <h1 style="margin-left: -1em;"><p >Welcome to</p> <p style="margin-left: 6em;">ALLAROMA</p> <p style="margin-left: 9em;">Kitchen</p> </h1>
+           </div>
+    </div>
+    
+    <div class="today_menu">
+        <H1 class="top_title">WEEKLY MENU</H1>
+      <h2 class="sub_title">Special Order on Our Menu</h2>
+    </div>
+      
+      <section id="menu">
+      <div class="item">
+        <img src="https://i.ibb.co/MD9M5Qw/IMG-20230513-WA0003.jpg" alt="OPENED BUFFET">
+        <h3>Opened Buffet</h3>
+        <p>a picture of our service in occassions. enjoy the AROMA buffet table and feel free to contact us for your occassions</p>
+        <a href="order.html"><button style="color: black; background-color: rgb(235, 20, 255); border: 2px solid rgb(255, 0, 242); font-size: 20px;"> Click here to Order</button></a>
+        
+        <!-- ................... 1st one ...................... -->
+
+        <input type="text" value="
+        Delicious Beans and Plantain, prepared with red oil" id="myInput" hidden>
+
+
+<button style="background-color: rgb(255, 255, 255); width: 100%; height: 50px; border: none;"  onclick="myFunction()" onmouseout="outFunc()">
+  <span style="background-color: rgba(255, 0, 0, 0); height: 70px; margin-top: 0em; text-align: center; margin-bottom: 11em; color: black;" id="myTooltip"> 1000FCFA <br>Copy discription?</span>
+  
+  </button>
+      </div>
+
+
+      <div class="item">
+        <img src="https://i.ibb.co/RQc5ZPm/IMG-20230513-WA0005.jpg" alt="IMG-20230513-WA0005">
+
+        <h3>Beans and Plantain
+        </h3>
+        <p>  Delicious Beans and Plantain, prepared with red oil Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+
+        <a href="order.html"> Click to Order</a>   
+       
+         <!-- ................... 2nd one ...................... -->
+        <input type="text" value="
+        Delicious Beans and Plantain, prepared with red oil" id="myInpu" hidden>
+
+
+<button style="background-color: rgb(255, 255, 255); width: 100%; height: 50px; border: none;"  onclick="myFunctio()" onmouseout="outFun()">
+  <span style="background-color: rgba(255, 0, 0, 0); height: 70px; margin-top: 0em; text-align: center; margin-bottom: 11em; color: black;" id="myToolti"> 1000FCFA <br>Copy discription?</span>
+  
+  </button>
+      </div>
+      <div class="item">
+        <img src="https://i.ibb.co/brSGCVt/IMG-20230513-WA0004.jpg" alt="IMG-20230513-WA0004">
+        <h3>Appetizer 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#">Order</a>
+
+         <!-- ................... 3rd one ...................... -->
+        <input type="text" value="
+        Delicious Beans and Plantain, prepared with red oil" id="myInp" hidden>
+
+
+<button style="background-color: rgb(255, 255, 255); width: 100%; height: 50px; border: none;"  onclick="myFuncti()" onmouseout="outFu()">
+  <span style="background-color: rgba(255, 0, 0, 0); height: 70px; margin-top: 0em; text-align: center; color: black;" id="myToolt"> 1000FCFA <br>Copy discription?</span>
+  
+  </button>
+      </div>
+      
+      <div class="item">
+        <img src="https://i.ibb.co/PWY6TNP/IMG-20230513-WA0009.jpg" alt="IMG-20230513-WA0009">
+        <h3>Fufu Corn and Vergetables</h3>
+        <p>Delicious food from the people of Northwest Region</p>
+        <a href="wa.me/+237678058653?text=Hello,%20I%20want%20to%20Order%20fufu%20corn%20&%20vegetable%20Which%20is%201000frs%20"><span>1000FCFA</span></a>
+      </div>
+      <div class="item">
+        <img src="https://i.ibb.co/ykz1jTx/IMG-20230513-WA0010.jpg" alt="IMG-20230513-WA0010">
+        <h3>Fufu Corn and Vergetables</h3>
+        <p>Delicious food from the people of Northwest Region</p>
+        <a href="wa.me/+237678058653?text=Hello,%20I%20want%20to%20Order%20fufu%20corn%20&%20vegetable%20Which%20is%201000frs%20"><span>1000FCFA</span></a>
+      </div>
+      <div class="item">
+        <img src="https://i.ibb.co/zsbXzWB/IMG-20230513-WA0014.jpg" alt="IMG-20230513-WA0014">
+        <h3>Fufu Corn and Vergetables</h3>
+        <p>Delicious food from the people of Northwest Region</p>
+        <a href="wa.me/+237678058653?text=Hello,%20I%20want%20to%20Order%20fufu%20corn%20&%20vegetable%20Which%20is%201000frs%20"><span>1000FCFA</span></a>
+      </div>
+      </section>
+
+      <h2 class="top_title">Others</h2>
+      <section id="menu">
+      <div class="item">
+        <img src="IMG/maxresdefault (1).jpg" alt="Entree 1">
+        <h3>Water Fufu and Eru</h3>
+        <p>Get a taste of it</p>
+        <a href="wa.me/+237678058653?text=Hello,%20I%20want%20to%20Order%20water%20fufu%20&%20eru%20Which%20is%201000frs%20"><span>1000FCFA</span></a>
+        </div>
+      <div class="item">
+        <img src="IMG/the-best-african-recipes_02.jpg" alt="Entree 2">
+        <h3>Entree 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span>1000FCFA</span>
+      </div>
+      <div class="item">
+        <img src="IMG/the-best-african-recipes_02.jpg" alt="Entree 3">
+        <h3>Entree 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span>1000FCFA</span>
+      </div>
+
+      <div class="item">
+        <img src="IMG/the-best-african-recipes_02.jpg" alt="Entree 3">
+        <h3>Entree 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span>1000FCFA</span>
+      </div>
+      <div class="item">
+        <img src="IMG/the-best-african-recipes_02.jpg" alt="Entree 3">
+        <h3>Entree 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span>1000FCFA</span>
+      </div>
+      <div class="item">
+        <img src="IMG/the-best-african-recipes_02.jpg" alt="Entree 3">
+        <h3>Entree 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span>1000FCFA</span>
+      </div>
+      </section>
+       
+      <h2 class="top_title">Desserts</h2>
+      <section id="menu">
+      <div class="item">
+        <img src="IMG/the-best-african-recipes_02.jpg" alt="Dessert 1">
+        <h3>Dessert 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span>1000FCFA</span>
+      </div>
+
+      <div class="item">
+        <img src="IMG/the-best-african-recipes_02.jpg" alt="Dessert 2">
+        <h3>Dessert 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span>1000FCFA</span>
+        </div>
+
+        <div class="item">
+          <img src="IMG/the-best-african-recipes_02.jpg" alt="Dessert 3">
+          <h3>Dessert 3</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <span>1000FCFA</span>
+        </div>
+        <div class="item">
+            <img src="IMG/the-best-african-recipes_02.jpg" alt="Dessert 3">
+            <h3>Dessert 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <span>1000FCFA</span>
+          </div>
+          <div class="item">
+            <img src="IMG/the-best-african-recipes_02.jpg" alt="Entree 3">
+            <h3>Entree 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <span>1000FCFA</span>
+          </div>
+          <div class="item">
+            <img src="IMG/the-best-african-recipes_02.jpg" alt="Entree 3">
+            <h3>Entree 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <span>1000FCFA</span>
+          </div>
+      </section>
+      <section id="contact">
+        <div class="contact-container container">
+            <div class="contact-img">
+                <img src="icons8_Phone_Map_Pin_144px.png" alt="" />
+            </div>
+
+            <div style="text-align: center;" class="form-container">
+              <h2>Contact Us</h2>
+          <p>Do you have any question or suggestions feel free to contact us anytime
+              <p>654355575<br>680565993<br>jacksongreenh@gmail.com</p>
+          </p>
+              <a href="contact.html" class="btn btn-primary">Contact us</a>
+          </div>
+        </div>
+    </section>
+
+    <h2 style="align-items: center; text-align: center; background-color: rgb(0, 0, 0); color: aliceblue;"><br>&copy; 2023---Design by: JACKBASE.TECH-IT SERVICES AND COMPUTER RELATED ISSUES<br></h2>
+  
+    <script src="scriptBackChan.js"></script>
+    <script>
+
+      //1st one
+      function myFunction() {
+        var copyText = document.getElementById("myInput");
+        
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        
+        var tooltip = document.getElementById("myTooltip");
+       
+        tooltip.innerHTML = "Copied: " + copyText.value;
+      }
+      
+      function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        
+        tooltip.innerHTML = "1000 FCFA           Copy discription?";
+      }
+
+      // 2nd one
+      function myFunctio() {
+        var copyText = document.getElementById("myInpu");
+        
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        
+        var tooltip = document.getElementById("myToolti");
+       
+        tooltip.innerHTML = "Copied: " + copyText.value;
+      }
+      
+      function outFun() {
+        var tooltip = document.getElementById("myToolti");
+        
+        tooltip.innerHTML = "1000 FCFA           Copy discription?";
+      }
+
+      // 3rd one
+      function myFuncti() {
+        var copyText = document.getElementById("myInp");
+        
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        
+        var tooltip = document.getElementById("myToolt");
+       
+        tooltip.innerHTML = "Copied: " + copyText.value;
+      }
+      
+      function outFun() {
+        var tooltip = document.getElementById("myToolt");
+        
+        tooltip.innerHTML = "1000 FCFA           Copy discription?";
+      }
+      </script>
+  </body>
+</html>
